@@ -1,4 +1,2 @@
-FROM php:7.4-cli
-COPY . /usr/scr/myapp
-WORKDIR /usr/src/myapp
-CMD ["php", "./first.php"]
+FROM php:7.2-apache
+RUN docker-php-ext-install mysqli
